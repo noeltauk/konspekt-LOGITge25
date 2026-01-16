@@ -1,4 +1,5 @@
-﻿using System; //<----- enne nimeruumi peab olema, selles failis/klassis kasutatud paketid/moodulid ja süteemi muudele osadele viidatakse sellele
+﻿using System;
+using System.Globalization; //<----- enne nimeruumi peab olema, selles failis/klassis kasutatud paketid/moodulid ja süteemi muudele osadele viidatakse sellele
 // süsteemi muuks osaks võib olla kas os'i võimalused või muud projektid. teised projektid viidatakse tavaliselt solution failist (.sln)
 
 namespace EsimeneProjekt       // nimega namespace või {} sulud sisaldavad kontenerit kus asub terve programmi nime
@@ -184,7 +185,6 @@ namespace EsimeneProjekt       // nimega namespace või {} sulud sisaldavad kont
             long lõpplong = lõpp;
             float floa2 = lõpplong;
             double doubleandnextperson = floa2;
-
 
 
 
