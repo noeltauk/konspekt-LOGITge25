@@ -1,2 +1,2 @@
-# Konspekt_EP_Jüri_Vaitmaa_LOGITge25
+# Konspekt_EP_Noel_Tauk_LOGITge25
 programmeerimiste aluste konspekt

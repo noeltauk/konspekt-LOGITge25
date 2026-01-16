@@ -1,8 +1,11 @@
-﻿namespace EsimeneProjekt
+﻿using System; //<----- enne nimeruumi peab olema, selles failis/klassis kasutatud paketid/moodulid ja süteemi muudele osadele viidatakse sellele
+// süsteemi muuks osaks võib olla kas os'i võimalused või muud projektid. teised projektid viidatakse tavaliselt solution failist (.sln)
+
+namespace EsimeneProjekt       // nimega namespace või {} sulud sisaldavad kontenerit kus asub terve programmi nime
 {
-    internal class Program
+    internal class Program // programmi klass, mis on konteiner
     {
-        static void Main(string[] args)
+        static void Main(string[] args) // "main" on see mis alati käivitatakse 
         {
             /* näiteprogramm 1*/
             //int palk = 2345;
@@ -127,7 +130,7 @@
             tee tingimuskontroll, mis kontrollib et eesnimi ei oleks tühi, või perekonnanimi ei oleks tühi, ning tagasta sõnum sisestama pidi mõlemad nime ✅
             kui aga mõlemad nimed on olemas, siis tagasta kasutajale tema ees ja perekonnanimega tervitus. ✅
             */
-
+            /*
             Console.WriteLine("Palun sisesta oma vanus, kirjuta täisarvuna: ");
             int isikuVanus = 0;
             isikuVanus = int.Parse(Console.ReadLine());
@@ -160,13 +163,59 @@
                 }
             }
 
-            /*
-                üleval harjutused
+            /**/
+            int arv = 9001;
+            Console.WriteLine(arv);
+            double doublearv = arv;
+            Console.WriteLine(doublearv);
+
+            double uusdouble = 6.7;
+            Console.WriteLine(uusdouble);
+            int uusarv = (int)uusdouble;
+            Console.WriteLine(uusarv);
+
+            double uusinf1 = 1.23d;
+            float newfloa1 = (float)uusinf1;
+            long uuslong = (long)newfloa1;
+            int uusint = (int)uuslong;
+            char uuschar1 = (char)uusint;
+
+            int lõpp = uuschar1;
+            long lõpplong = lõpp;
+            float floa2 = lõpplong;
+            double doubleandnextperson = floa2;
+
+
+
+
+
+               // üleval harjutused
 
                 https://meet.google.com/qjt-wofj-gdb
 
-                all teooria
-                */
+              //  all teooria
+                
+            ///*   -= S Ü N T A K S =-                             */
+            Console.WriteLine("'Ommik"); // seeeeeeeeeeeeeeeeee
+            string dm = Console.ReadLine(); // erm see on teine
+            Console.WriteLine(":D");
+            // ; <-- iga koodilause peab sellega lõppema
+            // console - see on windowsi süsteemi/C# käsurea adreseermise pakett. millega saab erinevaid käsurea operatasioone teha; :D
+            // . näitab alamkäsku/aadressi  nagu folderis olevat uut kohta, seda kasustakse et eelnevast objektist tulenevalt saada mingi meetod funktsioon
+            // antud juhul adresseeritakse reas 174 (16.01.2026)  console tööriista
+            // WriteLine on funktsioon mis praegu on olemas, see kuvab käsureale teksti või parameetreid
+            // () sulud see sisaldab infot või parameetreid mis on funktsiooniks vajalikud
+            // {} ma vihkan neid, tähistab koodiplokki konteineri jaoks
+            // [] erm, tähistab massiivi (
+            // "" tähistavad sõne (ehk string?) andmetüüpi. need andmed käivad "" vahel
+            // string on andmetüüp mis käib muutuja (variable) ees. andmetüübis asuvad ka vajalikud funktsioonid mis on selle tüübiga seotud
+            // dm (teine) on variable, mis omab stringi andmeid ja omistatakse omistusoperatsiooniga readline
+            // readline (teine) funktsioon, loeb kasutaja poolt sisestatud string andmeid
+            // // tähistab ülejäänud ühele reale kommentaari
+            // /* */ nagu sulud, tähistavad suuremaid kommentaare kui 1 rida
+            // /// funktsiooni summary kommentaar, kirjeldab meetodeid mille tekst kuvatakse välja tooltipina
+            // tab - taane - aitab arendajal aru saada kuskohas või millise ploki sees kood praegu asub ning aitab järge pidada
+
 
             ///*   -= L I H T A N D M E T Ü Ü B I D =-             */
             //string tekst = "mingisugune inimloetav tekstike"; //tekst
@@ -183,6 +232,14 @@
             ////string string = "abc"; //is bäd
             //string sõne = "abc"; //is gud
 
+            // 1    2 3   4  5
+            string ap = "def";  /* 1. muutuja kirjutatakse alustades andmetüübist (string, int jne) selleta ei tööta. 2.
+                                 * 2. siis on nimi, ja tavaliselt eesmärki nende nimedega.
+            camelCase soovitatud, ehk esimene on väike ja siis uued sõnad suurega. 
+                                   3. = ehk omistusoperaator, mis annad andmed 
+                                   4. omistamisandmed
+                                   5. lauselõpp */
+                               
             /*   -= O M I S T U S O P E R A A T O R I D =-          */
             // =    -> üksik võrdusmärk omistab muutja sisse väärtuse, mida adresseeritakse muutuja enda nimega
             int muutuja = 1;
@@ -240,6 +297,32 @@
             {               //  mille koodiploki sisu täidetakse ilma oma tingimuse avaldise kontrollita (ei oma avaldist) kuna else koodiplokk teostatakse
                             //  kõikide teiste tingimuste läbikukkumisel (kõik eelnevad tagastavad tulemusena "false")
             }
+
+            /*  -= teisendamine / castimine =-  
+            // castimine on arvu teisendamine ühest liigist teise või see mis ma teen järvel üksi
+            automaatsne castimine on see kui väiksemast andmetüübist teisendatakse suuremasse
+            manuaalne on siis kui seda tehakse suuremast väiksemasse, peab sulud ette panema koos soovitud andmetüübiga
+
+
+
+            */
+           
+
+
+            // see on manuaalne
+            double uusinf2 = 1.23d; // algus castimine
+            float newfloa2 = (float)uusinf2; // saadakse float ja nimetatkse floatina
+            long uuslon2 = (long)newfloa2; // jne jne long
+            int uusin2 = (int)uuslon2; // jne jne int
+            char uuschar2 = (char)uusin2; // jne jne char
+
+            // see on automaatne
+            int lõp2 = uuschar2; // jne jne tagasi
+            long lõpplon2 = lõp2; // jne jne long
+            float floa3 = lõpplon2; // jne jne float
+            double doubleandnextperso2 = floa3; // jne jne double
+
+            // suuremast väiksemasse teisendamine kaotab resulutsiooni, mida ei saa tagasi isegi kui teed sama tagurpidi
         }
     }
 }
