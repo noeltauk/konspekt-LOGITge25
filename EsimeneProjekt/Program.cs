@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 using System.Globalization; //<----- enne nimeruumi peab olema, selles failis/klassis kasutatud paketid/moodulid ja süteemi muudele osadele viidatakse sellele
 // süsteemi muuks osaks võib olla kas os'i võimalused või muud projektid. teised projektid viidatakse tavaliselt solution failist (.sln)
 
@@ -164,37 +165,139 @@ namespace EsimeneProjekt       // nimega namespace või {} sulud sisaldavad kont
                 }
             }
 
-            /**/
-            int arv = 9001;
-            Console.WriteLine(arv);
-            double doublearv = arv;
-            Console.WriteLine(doublearv);
 
-            double uusdouble = 6.7;
-            Console.WriteLine(uusdouble);
-            int uusarv = (int)uusdouble;
-            Console.WriteLine(uusarv);
+              Näiteülesanne 7 - "kalkulaator" */
+            /*  Console.WriteLine("palun sisesta esimene arv");
+                float arv1 = 0.0f;
+                arv1 = float.Parse(Console.ReadLine());
 
-            double uusinf1 = 1.23d;
-            float newfloa1 = (float)uusinf1;
-            long uuslong = (long)newfloa1;
-            int uusint = (int)uuslong;
-            char uuschar1 = (char)uusint;
+                Console.WriteLine("palun sisesta teine arv");
+                float arv2 = 0.0f;
+                arv2 = float.Parse(Console.ReadLine());
 
-            int lõpp = uuschar1;
-            long lõpplong = lõpp;
-            float floa2 = lõpplong;
-            double doubleandnextperson = floa2;
+                Console.WriteLine("mis tüüpi tehet sa teha soovid? (+ - / * ^ V)");
+                string tehtetüüp = "";
+                tehtetüüp = Console.ReadLine();
+
+                double tehteTulemus = 0.0d;
+                if (tehtetüüp != "")
+                {
+                    switch (tehtetüüp)
+                    {
+                        default:
+                            Console.WriteLine("tehtetüüp pole valitud, tehet ei sooritata");
+                            break;
+                        case "+":
+                            tehteTulemus = arv1 + arv2;
+                            break;
+                        case "-":
+                            tehteTulemus = arv1 - arv2;
+                            break;
+                        case "/":
+                            tehteTulemus = arv1 / arv2;
+                            break;
+                        case "*":
+                            tehteTulemus = arv1 * arv2;
+                            break;
+                        case "^":
+                            tehteTulemus = Math.Pow(arv1, arv2);
+                            break;
+                        case "V":
+                            tehteTulemus = Math.Pow(arv1, 1 / arv2);
+                            break;
+                    }
+                    Console.WriteLine($"tehte tulemus on {arv1} {tehtetüüp} {arv2} = {tehteTulemus}");
+                }
+                else
+                {
+                    Console.WriteLine("tehtetüüp pole valitud, tehet ei sooritata");
+                }
+            */
+            Console.WriteLine("palun sisesta esimene arv");
+            float arv1 = 0.0f; // igapool on siin . aga kui mina oma arvutis seda proovin siis pean panema hoopis ,  ????
+            arv1 = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("palun sisesta teine arv");
+            float arv2 = 0.0f;// siin ka...??
+            arv2 = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("mis tüüpi tehet sa teha soovid? (+ - / * ^ V)");
+            string tehtetüüp = "";
+            tehtetüüp = Console.ReadLine();
+
+            double tehteTulemus = 0.0d;
+
+            if (tehtetüüp != "")
+            {
 
 
-
-
-               // üleval harjutused
-
-                https://meet.google.com/qjt-wofj-gdb
-
-              //  all teooria
+                if (tehtetüüp == "+")
+                {
+                    tehteTulemus = arv1 + arv2;
+                }
+                else if (tehtetüüp == "-")
+                {
+                    tehteTulemus = arv1 - arv2;
+                }
+                else if (tehtetüüp == "*")
+                {
+                    tehteTulemus = arv1 * arv2;
+                }
+                else if (tehtetüüp == "^")
+                {
+                    tehteTulemus = Math.Pow(arv1, arv2);
+                }
+                else if (tehtetüüp == "/")
+                {
+                    tehteTulemus = arv1 / arv2;
+                }
+                else if (tehtetüüp == "V")
+                {
+                    tehteTulemus = Math.Pow(arv1, 1 / arv2);
+                }
+                else
+                {
+                    Console.WriteLine("tehtetüüp pole valitud, tehet ei sooritata");
+                    return;
+                }
+                Console.WriteLine($"tehte tulemus on {arv1} {tehtetüüp} {arv2} = {tehteTulemus}");
+            }
+            else
+            {
+                Console.WriteLine("tehtetüüp pole valitud, tehet ei sooritata");
+            }
                 
+        /*
+         * int arv = 9001;
+        Console.WriteLine(arv);
+        double doublearv = arv;
+        Console.WriteLine(doublearv);
+
+        double uusdouble = 6.7;
+        Console.WriteLine(uusdouble);
+        int uusarv = (int)uusdouble;
+        Console.WriteLine(uusarv);
+
+        double uusinf1 = 1.23d;
+        float newfloa1 = (float)uusinf1;
+        long uuslong = (long)newfloa1;
+        int uusint = (int)uuslong;
+        char uuschar1 = (char)uusint;
+
+        int lõpp = uuschar1;
+        long lõpplong = lõpp;
+        float floa2 = lõpplong;
+        double doubleandnextperson = floa2;
+
+        */
+
+
+        // üleval harjutused
+
+        https://meet.google.com/qjt-wofj-gdb
+
+            //  all teooria
+
             ///*   -= S Ü N T A K S =-                             */
             Console.WriteLine("'Ommik"); // seeeeeeeeeeeeeeeeee
             string dm = Console.ReadLine(); // erm see on teine
@@ -239,7 +342,7 @@ namespace EsimeneProjekt       // nimega namespace või {} sulud sisaldavad kont
                                    3. = ehk omistusoperaator, mis annad andmed 
                                    4. omistamisandmed
                                    5. lauselõpp */
-                               
+
             /*   -= O M I S T U S O P E R A A T O R I D =-          */
             // =    -> üksik võrdusmärk omistab muutja sisse väärtuse, mida adresseeritakse muutuja enda nimega
             int muutuja = 1;
@@ -255,7 +358,7 @@ namespace EsimeneProjekt       // nimega namespace või {} sulud sisaldavad kont
             muutuja %= 2;
 
             // ++   -> on kiirtehe, mis muutujale liidab ainult ühe juurde.
-            muutuja++; 
+            muutuja++;
             // --   -> on kiirtehe, mis muutujast lahutab ainult ühe maha.
             muutuja--;
 
@@ -306,7 +409,7 @@ namespace EsimeneProjekt       // nimega namespace või {} sulud sisaldavad kont
 
 
             */
-           
+
 
 
             // see on manuaalne
