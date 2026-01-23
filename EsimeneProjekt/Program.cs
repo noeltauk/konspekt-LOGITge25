@@ -212,7 +212,7 @@ namespace EsimeneProjekt       // nimega namespace või {} sulud sisaldavad kont
                 {
                     Console.WriteLine("tehtetüüp pole valitud, tehet ei sooritata");
                 }
-            */
+            */ /*
             Console.WriteLine("palun sisesta esimene arv");
             float arv1 = 0.0f; // igapool on siin . aga kui mina oma arvutis seda proovin siis pean panema hoopis ,  ????
             arv1 = float.Parse(Console.ReadLine());
@@ -266,32 +266,98 @@ namespace EsimeneProjekt       // nimega namespace või {} sulud sisaldavad kont
             {
                 Console.WriteLine("tehtetüüp pole valitud, tehet ei sooritata");
             }
-                
-        /*
-         * int arv = 9001;
-        Console.WriteLine(arv);
-        double doublearv = arv;
-        Console.WriteLine(doublearv);
+                */
 
-        double uusdouble = 6.7;
-        Console.WriteLine(uusdouble);
-        int uusarv = (int)uusdouble;
-        Console.WriteLine(uusarv);
+            /*
+             * int arv = 9001;
+            Console.WriteLine(arv);
+            double doublearv = arv;
+            Console.WriteLine(doublearv);
 
-        double uusinf1 = 1.23d;
-        float newfloa1 = (float)uusinf1;
-        long uuslong = (long)newfloa1;
-        int uusint = (int)uuslong;
-        char uuschar1 = (char)uusint;
+            double uusdouble = 6.7;
+            Console.WriteLine(uusdouble);
+            int uusarv = (int)uusdouble;
+            Console.WriteLine(uusarv);
 
-        int lõpp = uuschar1;
-        long lõpplong = lõpp;
-        float floa2 = lõpplong;
-        double doubleandnextperson = floa2;
+            double uusinf1 = 1.23d;
+            float newfloa1 = (float)uusinf1;
+            long uuslong = (long)newfloa1;
+            int uusint = (int)uuslong;
+            char uuschar1 = (char)uusint;
 
-        */
+            int lõpp = uuschar1;
+            long lõpplong = lõpp;
+            float floa2 = lõpplong;
+            double doubleandnextperson = floa2;
 
 
+
+                Näiteülesanne 8
+            //Kirjuta programm mis küsib kasutajatelt pikkust (cm) 
+            küsib perekonnaliikmete pikkust (ema isa vend)
+            arvutuab perekonna keskmise pikkuse, vanemate keskmise, laste keskmise, ja nende kahe keskmise vahe, kõik peab olema esitatud komakohtadega arvudena.
+            */
+
+            /*
+            int user = 0;
+            int bro = 0;
+            int mom = 0;
+            int dad = 0;
+            Console.WriteLine("Sisesta oma pikkus (sentimeetrites): ");
+            user = int.Parse(Console.ReadLine());
+            Console.WriteLine("Sisesta oma venna pikkus (sentimeetrites): ");
+            bro = int.Parse(Console.ReadLine());
+            Console.WriteLine("Sisesta oma ema pikkus (sentimeetrites): ");
+            mom = int.Parse(Console.ReadLine());
+            Console.WriteLine("Sisesta oma isa pikkus (sentimeetrites): ");
+            dad = int.Parse(Console.ReadLine());
+            float kesk = ((float)(user + mom + bro + dad) / 4) / 100;
+            float keskvanemad = ((float)(mom + dad) / 2) / 100;
+            float kesklapsed = ((float)(user + bro) / 2) / 100;
+            float vahe = ((float)(user + mom + bro + dad) / 4) / 100;
+            if (keskvanemad > kesklapsed)
+            { 
+                vahe = keskvanemad - kesklapsed;
+            }
+            else
+            {
+                vahe = kesklapsed - keskvanemad;
+            }
+            Console.WriteLine("perekeskmine on " + Math.Round(kesk,2) + "m. vanematekeskmine on " + Math.Round(keskvanemad,2) + "m. \nlastekeskmine on " + Math.Round(kesklapsed,2) + "m. keskmiste vahe on "+ Math.Round(vahe,2) + "m.");
+            */
+
+            /*
+            //int user = 0;
+            //int bro = 0;
+            //int mom = 0;
+            //int dad = 0;
+            List<int> vanused = new List<int>();
+            List<string> isik = new List<string>() {"sinu", "oma venna", "oma isa", "oma ema" };
+            int i = 0;
+            do
+            {
+                Console.WriteLine("sisesta " +isik.ElementAt(i)+ " pikkus sentimeetrites"); // kuvame kasutajale teate, koos isikuga mida adresseeritakse tsüklimuutuja abil järjendist "isikud"
+                vanused.Add(int.Parse(Console.ReadLine())); //add on listi meetod elemendi lisamiseks, lisatakse otse parsitud täisarv käsurea pealt
+
+
+
+                i++; // ++ on lis +1 ja -- on -1
+            } while (i < isik.Count);
+        
+            float kesk = ((float)(vanused.ElementAt(0) + vanused.ElementAt(3) + vanused.ElementAt(1) + vanused.ElementAt(2)) / 4) / 100;
+            float keskvanemad = ((float)(vanused.ElementAt(3) + vanused.ElementAt(2)) / 2) / 100;
+            float kesklapsed = ((float)(vanused.ElementAt(0) + vanused.ElementAt(1)) / 2) / 100;
+            float vahe = 0;
+            if (keskvanemad > kesklapsed)
+            {
+                vahe = (keskvanemad - kesklapsed);
+            }
+            else
+            {
+                vahe = (kesklapsed - keskvanemad);
+            }
+            Console.WriteLine("perekeskmine on " + Math.Round(kesk, 2) + "m. vanematekeskmine on " + Math.Round(keskvanemad, 2) + "m. \nlastekeskmine on " + Math.Round(kesklapsed, 2) + "m. keskmiste vahe on " + Math.Round(vahe, 2) + "m.");
+            */
         // üleval harjutused
 
         https://meet.google.com/qjt-wofj-gdb
@@ -300,7 +366,7 @@ namespace EsimeneProjekt       // nimega namespace või {} sulud sisaldavad kont
 
             ///*   -= S Ü N T A K S =-                             */
             Console.WriteLine("'Ommik"); // seeeeeeeeeeeeeeeeee
-            string dm = Console.ReadLine(); // erm see on teine
+            // string dm = Console.ReadLine(); // erm see on teine
             Console.WriteLine(":D");
             // ; <-- iga koodilause peab sellega lõppema
             // console - see on windowsi süsteemi/C# käsurea adreseermise pakett. millega saab erinevaid käsurea operatasioone teha; :D
@@ -411,7 +477,7 @@ namespace EsimeneProjekt       // nimega namespace või {} sulud sisaldavad kont
             */
 
 
-
+            /*
             // see on manuaalne
             double uusinf2 = 1.23d; // algus castimine
             float newfloa2 = (float)uusinf2; // saadakse float ja nimetatkse floatina
@@ -424,8 +490,59 @@ namespace EsimeneProjekt       // nimega namespace või {} sulud sisaldavad kont
             long lõpplon2 = lõp2; // jne jne long
             float floa3 = lõpplon2; // jne jne float
             double doubleandnextperso2 = floa3; // jne jne double
-
+            */
             // suuremast väiksemasse teisendamine kaotab resulutsiooni, mida ei saa tagasi isegi kui teed sama tagurpidi
+            /* 
+             Parsimine on tektsist katse teisendada mingeid tüüpi arvandmeid.
+            Teisendus toimub küsides mingist andmetüübist  talle sisseehitatud meetodi "Parse()" abil mingist sõnest arvandmeid mt: 
+            string tekstonsiin = "1";                       sõne omab potensiaalselt arvväärtust
+            int teisendamind = int.Parse(tekstonsiin);      muutujasse teisendamind omistatakse parse käsuga arvväärtus  
+            Console.WriteLine(teisendamind);
+             
+             Parsimisel on alteratiivne meetod - "TryParse", see proovib teisendada, aga kui ei tööta, tagastatakse algväärtus/false
+            string tekstonsiin2 = "2";                       sõne omab potensiaalselt arvväärtus   
+            Console.WriteLine(int.TryParse(tekstonsiin2, out int result)); outputib tulemuse või arvu
+
+            Konvertimine on mingi andme otsene teisendamine ükskõik mis muusse andmetüüpi, käsk on "Convert"
+            Convert moodulis on sarnaselt ToString() käsule ka muid andmetüüpe ja konvertimismeetodeid
+            
+            var inf = "6.7";                                //info vajab teisendamist
+            string inftxt = Convert.ToString(inf);          //paneb variable koos soovitud tüübiga ja ss convertitakse see info
+            char infch = Convert.ToChar(inf);               // teisendab
+            int infint = Convert.ToInt32(inf);              // teisendab
+            long inflong = Convert.ToInt64(inf);            // teisendab
+            decimal infdecimal = Convert.ToDecimal(inf);    // teisendab
+            double infdouble = Convert.ToDouble(inf);       // teisendab
+            byte infbyte = Convert.ToByte(inf);             // teisendab
+            bool infbool = Convert.ToBoolean(inf);          // teisendab
+
+            */
+            /*
+            overload, saab mitmeid operatsioone teha --- NB! todo list
+
+             /*   -= T S Ü K L I D  =-                   */
+
+            /* Tsüklid on programmeerimises viis automatiseerida korduvat tegevust, hoiab ridu vähemaks, ei lase kirjaveal tekkida. C# keeles on 4 peamist tsüklit
+             1. do-whie
+             2. while
+             3. for
+             4. foreach
+            tsüklitel on 3 peamist komponenti - käsklus, tsükli tingimus ja kood mis jookseb
+
+
+                    /*   -= T S Ü K L I D         DO-WHILE =-                   */
+            
+            //do-while erineb teistest sellega, et tingimuse kontroll toimub pärast esimest tegevuseringi, kõikides teistes tsüklites toimub kontroll enne esimest
+            int tsüklimuutujal = 0;            // muutuja mis omab tsükli töö tingimuse abil kontrollimiseks vajalikku väärtust ehk tsüklimuutuja
+            do                                 // do on kaitstud sõna mis alustab tsüklit, pärast seda on tsükli kood ja pärast seda on kontroll kas kood jookseb uuesti
+            {
+                Console.WriteLine(tsüklimuutujal);  // tsükli kood
+                tsüklimuutujal++;
+                // kui tsüklimuutuja pole tsüklis, siis jääb see jooksma igavesti, peaks ka kuidagi mõjutama/muutma muutujat, et siis ei juhtuks nii
+            } while (tsüklimuutujal != 5);       //kontroll, while on ka kaitstud sõna, kui tingimus täitub - "true" siis kood jookseb uuesti
+
+            
+
         }
     }
 }
